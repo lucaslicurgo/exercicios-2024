@@ -6,15 +6,13 @@ use Box\Spout\Writer\Common\Creator\WriterEntityFactory;
 use Chuva\Php\WebScrapping\Entity\Paper;
 use Chuva\Php\WebScrapping\Entity\Person;
 use DOMXPath;
-
-/**
- * Does the scrapping of a webpage.
- */
-
 require_once 'Entity/Paper.php';
 require_once 'Entity/Person.php';
 require_once 'vendor/autoload.php';
 
+/**
+ * Does the scrapping of a webpage.
+ */
 class Scrapper {
 
   /**
@@ -40,7 +38,7 @@ class Scrapper {
       'Author 6', 'Author 6 Institution',
       'Author 7', 'Author 7 Institution',
       'Author 8', 'Author 8 Institution',
-      'Author 9', 'Author 9 Institution'
+      'Author 9', 'Author 9 Institution',
     ]);
     $writer->addRow($headerRow);
 
@@ -73,7 +71,7 @@ class Scrapper {
         $authors[10] ?? '', $authors[11] ?? '',
         $authors[12] ?? '', $authors[13] ?? '',
         $authors[14] ?? '', $authors[15] ?? '',
-        $authors[16] ?? '', $authors[17] ?? ''
+        $authors[16] ?? '', $authors[17] ?? '',
       ]);
 
       $writer->addRow($row);
@@ -85,5 +83,5 @@ class Scrapper {
 
     return $papers;
   }
-  
-}
+
+};
