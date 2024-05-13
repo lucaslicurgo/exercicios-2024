@@ -2,11 +2,14 @@
 
 namespace Chuva\Php\WebScrapping;
 
-use DOMXPath;
+use Box\Spout\Writer\Common\Creator\WriterEntityFactory;
 use Chuva\Php\WebScrapping\Entity\Paper;
 use Chuva\Php\WebScrapping\Entity\Person;
-use Box\Spout\Writer\Common\Creator\WriterEntityFactory;
-use Box\Spout\Common\Entity\Row;
+use DOMXPath;
+
+/**
+ * Does the scrapping of a webpage.
+ */
 
 require_once 'Entity/Paper.php';
 require_once 'Entity/Person.php';
@@ -15,6 +18,9 @@ require_once 'vendor/autoload.php';
 class Scrapper
 {
 
+  /**
+   * Loads paper information from the HTML and returns the array with the data.
+   */
   public function scrap(\DOMDocument $dom): array
   {
     $xPath = new DOMXPath($dom);
