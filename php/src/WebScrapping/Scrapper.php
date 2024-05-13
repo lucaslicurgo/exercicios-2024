@@ -85,4 +85,5 @@ class Scrapper {
 
     return $papers;
   }
+  
 }
