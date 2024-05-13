@@ -6,6 +6,7 @@ use Box\Spout\Writer\Common\Creator\WriterEntityFactory;
 use Chuva\Php\WebScrapping\Entity\Paper;
 use Chuva\Php\WebScrapping\Entity\Person;
 use DOMXPath;
+
 require_once 'Entity/Paper.php';
 require_once 'Entity/Person.php';
 require_once 'vendor/autoload.php';
@@ -84,4 +85,4 @@ class Scrapper {
     return $papers;
   }
 
-};
+}
