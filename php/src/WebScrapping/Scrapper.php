@@ -3,6 +3,8 @@
 namespace Chuva\Php\WebScrapping;
 
 use Box\Spout\Writer\Common\Creator\WriterEntityFactory;
+use Chuva\Php\WebScrapping\Entity\Paper;
+use Chuva\Php\WebScrapping\Entity\Person;
 
 require_once 'Entity/Paper.php';
 require_once 'Entity/Person.php';
@@ -17,7 +19,7 @@ class Scrapper {
    * Loads paper information from the HTML and returns the array with the data.
    */
   public function scrap(\DOMDocument $dom): array {
-    $xPath = new DOMXPath($dom);
+    $xPath = new \DOMXPath($dom);
 
     $projetos = $xPath->query('.//a[@class="paper-card p-lg bd-gradient-left"]');
 
