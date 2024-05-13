@@ -5,8 +5,7 @@ namespace Chuva\Php\WebScrapping\Entity;
 /**
  * The Paper class represents the row of the parsed data.
  */
-class Paper
-{
+class Paper{
 
   /**
    * Paper Id.
@@ -40,6 +39,7 @@ class Paper
    * Builder.
    */
   public function __construct($id, $title, $type, $authors = []) {
+    
     $this->id = $id;
     $this->title = $title;
     $this->type = $type;

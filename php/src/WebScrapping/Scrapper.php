@@ -15,14 +15,12 @@ require_once 'Entity/Paper.php';
 require_once 'Entity/Person.php';
 require_once 'vendor/autoload.php';
 
-class Scrapper
-{
+class Scrapper {
 
   /**
    * Loads paper information from the HTML and returns the array with the data.
    */
-  public function scrap(\DOMDocument $dom): array
-  {
+  public function scrap(\DOMDocument $dom): array {
     $xPath = new DOMXPath($dom);
 
     $projetos = $xPath->query('.//a[@class="paper-card p-lg bd-gradient-left"]');
